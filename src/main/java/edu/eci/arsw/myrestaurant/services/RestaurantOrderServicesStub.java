@@ -34,12 +34,12 @@ public class RestaurantOrderServicesStub implements RestaurantOrderServices {
             orders.put(order,tableOrders.get(order));
         }
         for(Integer order:orders.keySet()){
-            JSON.append(order).append(":").append(orders.get(order).toString());
+            JSON.append(order).append("->").append(orders.get(order).toString());
 
         }
 
         for(Integer order:orders.keySet()){
-            JSON.append("Total" + order).append(":").append(calc.calculateBill(orders.get(order),productsMap));
+            JSON.append("Total" + order).append("= ").append(calc.calculateBill(orders.get(order),productsMap));
         }
         return JSON;
 
