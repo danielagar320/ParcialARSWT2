@@ -23,10 +23,12 @@ public interface RestaurantOrderServices {
 
     RestaurantProduct getProductByName(String product) throws OrderServicesException;
 
+    StringBuilder getTable();
+
     Order getTableOrder(int tableNumber);
 
     Set<Integer> getTablesWithOrders();
 
     void releaseTable(int tableNumber) throws OrderServicesException;
-    
+
 }
